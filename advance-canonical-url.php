@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'advance_canonical_url' ) ) {
+
 	class advance_canonical_url {
 
 		private $options;
@@ -29,6 +30,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			$this->acu_init();
 		}
 
+		/**
+		 * Initialization
+		 */
 		public function acu_init() {
 
 			register_activation_hook( __FILE__, array( $this, 'acu_activation' ) );
@@ -43,6 +47,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			add_action( 'wp_head', array( $this, 'acu_render_canonical_url' ) );
 		}
 
+		/**
+		 * Plugin Activation
+		 */
 		public function acu_activation() {
 			$this->options    = get_option( 'acu_options' );
 			$canonical_method = ( $this->options['canonical_method'] ? $this->options['canonical_method'] : 'advance' );
@@ -55,21 +62,30 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			}
 		}
 
+		/**
+		 * Plugin Deactivation
+		 */
 		public function acu_deactivation() {
 			delete_option( 'acu_options' );
 		}
 
+		/**
+		 * Plugin Page
+		 */
 		public function acu_plugin_page() {
 			add_options_page(
 				'Advance Canonical Settings',
 				'Advance Canonical Settings',
 				'manage_options',
 				'advance_canonical_settings',
-				array( $this, 'acu_settings_page' )
+				array( $this, 'acu_settings_form' )
 			);
 		}
 
-		public function acu_settings_page() {
+		/**
+		 * Settings Form
+		 */
+		public function acu_settings_form() {
 			?>
 
 			<div class="wrap">
@@ -89,6 +105,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			<?php
 		}
 
+		/**
+		 * Settings, Section & Fields
+		 */
 		public function acu_settings_page_init() {
 			register_setting(
 				'acu_option_group',
@@ -110,6 +129,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			);
 		}
 
+		/**
+		 * Section Heading
+		 */
 		public function acu_section_information() {
 			?>
 
@@ -118,6 +140,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			<?php
 		}
 
+		/**
+		 * Options to Select
+		 */
 		public function select_canonical_method() {
 			$this->options = get_option( 'acu_options' );
 			?>
@@ -146,6 +171,10 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			<?php
 		}
 
+		/**
+		 * Sanitization & Validation of the option
+		 * @param $acu_input
+		 */
 		public function acu_sanitize_and_validate( $acu_input ) {
 			$acu_new_input = array();
 			if ( isset( $acu_input['canonical_method'] ) ) {
@@ -161,12 +190,16 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			}
 		}
 
+		/**
+		 * The Real Deal
+		 */
 		public function acu_render_canonical_url() {
 			echo '<!-- Advance Canonical URL -->
 			<link rel="canonical" content="' . get_bloginfo( 'url' ) . '' . $_SERVER['REQUEST_URI'] . '">
 			<!-- Advance Canonical URL -->';
 		}
 	}
+
 }
 
 $ACU = new advance_canonical_url();
