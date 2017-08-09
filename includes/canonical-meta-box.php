@@ -16,8 +16,15 @@ if (!class_exists('advance_canonical_meta_box')) {
          */
         public function __construct()
         {
+            add_action('admin_enqueue_scripts', array($this, 'acu_admin_style'));
             add_action('load-post.php', array($this, 'acu_meta_box_init'));
             add_action('load-post-new.php', array($this, 'acu_meta_box_init'));
+        }
+
+        public function acu_admin_style()
+        {
+            wp_register_style('acu_admin-styles', plugin_dir_url(__DIR__) . 'css/acu_admin.css', false, '1.0.0');
+            wp_enqueue_style('acu_admin-styles');
         }
 
         /**
@@ -106,7 +113,7 @@ if (!class_exists('advance_canonical_meta_box')) {
             /**
              * Sanitize the user input.
              */
-            $mydata = sanitize_text_field($_POST['acu_new_field']);
+            $mydata = sanitize_text_field($_POST['acu_adv_can_url']);
 
             /**
              * Update the meta field.
@@ -137,34 +144,29 @@ if (!class_exists('advance_canonical_meta_box')) {
             /**
              * Display the form, using the current value.
              */
+
+            if (empty($value)) {
             ?>
-            <div class="acu_default_can_url" style="height: auto; overflow: auto; margin: 10px 0;">
-                <label for="default_can_url"
-                       style="position: relative;top: 11px;margin-right: 7px;float: left;font-weight: 500;">
+            <div class="acu_default_can_url">
+                <label for="default_can_url" class="default_can_url">
                     <?php _e('Default Canonical URL: ', 'acu'); ?>
                 </label>
 
-                <p id="default_can_url" style="width: 178px;font-size: 14px;float: left;position: relative;top: -8px;padding: 3px 6px;
-    border: 1px solid #ddd;
-    -webkit-box-shadow: inset 0 1px 2px rgba( 0, 0, 0, 0.07 );
-    box-shadow: inset 0 1px 2px rgba( 0, 0, 0, 0.07 );
-    background-color: #fff;
-    color: #32373c;
-    outline: none;
-    -webkit-transition: 0.05s border-color ease-in-out;
-    transition: 0.05s border-color ease-in-out;
-"><?php echo esc_attr($default_can_url); ?></p>
+                <p id="default_can_url"><?php echo esc_attr($default_can_url); ?></p>
+
+                <p class="default_can_url_desc">This is the default canonical url of this item. Add a custom url below
+                    to override it.</p>
             </div>
-            <div class="acu_meta_box_container" style="height: auto; overflow: auto;">
-                <label for="acu_new_field"
-                       style="position: relative;top: 5px;margin-right: 54px;float: left;font-weight: 500;">
+            <?php } ?>
+            <div class="acu_meta_box_container">
+                <label for="acu_adv_can_url" class="acu_adv_can_url">
                     <?php _e('Canonical URL: ', 'acu'); ?>
                 </label>
-                <input type="text" id="acu_new_field" name="acu_new_field"
+                <input type="text" id="acu_adv_can_url" name="acu_adv_can_url"
                        value="<?php echo esc_attr($value); ?>"
-                       size="25" style="float: left;margin-right: 10px;"/>
+                       size="25"/>
 
-                <p style="float: left;margin: 4px 0 0 0;">Add a custom canonical url.</p>
+                <p class="custom_adv_can_url">Add a custom canonical url.</p>
             </div>
             <?php
         }
