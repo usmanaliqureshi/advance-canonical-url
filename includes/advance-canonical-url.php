@@ -43,7 +43,7 @@ if (!class_exists('advance_canonical_url')) {
         public function acu_activation()
         {
             $this->options = get_option('acu_options');
-            $canonical_method = ($this->options['canonical_method'] ? $this->options['canonical_method'] : 'advance');
+            $canonical_method = ($this->options['canonical_method'] ? $this->options['canonical_method'] : 'basic');
 
             if (!isset($this->options['canonical_method'])) {
                 $defaults = array(
@@ -170,12 +170,13 @@ if (!class_exists('advance_canonical_url')) {
 
         /**
          * Sanitization & Validation of the option
-         *
          * @param $acu_input
+         * @return array
          */
         public function acu_sanitize_and_validate($acu_input)
         {
             $acu_new_input = array();
+
             if (isset($acu_input['canonical_method'])) {
                 $acu_method_valid_values = array(
                     'basic',
@@ -187,6 +188,7 @@ if (!class_exists('advance_canonical_url')) {
                     wp_die("Invalid selection for Canonical Method, please go back and try again.");
                 }
             }
+            return $acu_new_input;
         }
 
         /**
@@ -194,12 +196,9 @@ if (!class_exists('advance_canonical_url')) {
          */
         public function acu_the_real_deal()
         {
-
-            global $post;
-
             $this->options = get_option('acu_options');
 
-            $value = get_post_meta($post->ID, '_acu_can_url_value', true);
+            $value = get_post_meta(get_the_ID(), '_acu_can_url_value', true);
 
             /**
              * Basic Canonical URL
@@ -215,6 +214,29 @@ if (!class_exists('advance_canonical_url')) {
             $advance .= '<link rel="canonical" content="' . $value . '">';
             $advance .= '<!-- Advance Canonical URL -->';
 
+            switch (true) {
+                case (is_front_page()):
+                    echo $basic;
+                    break;
+
+                case (is_home()):
+                    echo $basic;
+                    break;
+
+                case (is_single()):
+                    $this->acu_render_canonical_url($basic, $advance, $value);
+                    break;
+
+                case (is_page()):
+                    $this->acu_render_canonical_url($basic, $advance, $value);
+                    break;
+
+                default:
+                    $this->acu_render_canonical_url($basic, $advance, $value);
+            }
+        }
+
+        public function acu_render_canonical_url($basic, $advance, $value) {
             if ('basic' === $this->options['canonical_method']) {
                 echo $basic;
             } else {
