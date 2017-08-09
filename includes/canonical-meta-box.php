@@ -10,15 +10,21 @@ if (!class_exists('advance_canonical_meta_box')) {
 
     class advance_canonical_meta_box
     {
+        private $options;
 
         /**
          * Hook into the appropriate actions when the class is constructed.
          */
         public function __construct()
         {
-            add_action('admin_enqueue_scripts', array($this, 'acu_admin_style'));
-            add_action('load-post.php', array($this, 'acu_meta_box_init'));
-            add_action('load-post-new.php', array($this, 'acu_meta_box_init'));
+            $this->options = get_option('acu_options');
+            $canonical_method = $this->options['canonical_method'];
+
+            if ('advance' === $canonical_method) {
+                add_action('admin_enqueue_scripts', array($this, 'acu_admin_style'));
+                add_action('load-post.php', array($this, 'acu_meta_box_init'));
+                add_action('load-post-new.php', array($this, 'acu_meta_box_init'));
+            }
         }
 
         public function acu_admin_style()
@@ -113,12 +119,12 @@ if (!class_exists('advance_canonical_meta_box')) {
             /**
              * Sanitize the user input.
              */
-            $mydata = sanitize_text_field($_POST['acu_adv_can_url']);
+            $acu_adv_can_url_data = sanitize_text_field($_POST['acu_adv_can_url']);
 
             /**
              * Update the meta field.
              */
-            update_post_meta($post_id, '_acu_can_url_value', $mydata);
+            update_post_meta($post_id, '_acu_can_url_value', $acu_adv_can_url_data);
         }
 
 
@@ -146,17 +152,16 @@ if (!class_exists('advance_canonical_meta_box')) {
              */
 
             if (empty($value)) {
-            ?>
-            <div class="acu_default_can_url">
-                <label for="default_can_url" class="default_can_url">
-                    <?php _e('Default Canonical URL: ', 'acu'); ?>
-                </label>
+                ?>
+                <div class="acu_default_can_url">
+                    <label for="default_can_url" class="default_can_url">
+                        <?php _e('Default Canonical URL: ', 'acu'); ?>
+                    </label>
 
-                <p id="default_can_url"><?php echo esc_attr($default_can_url); ?></p>
+                    <p id="default_can_url"><?php echo esc_attr($default_can_url); ?></p>
 
-                <p class="default_can_url_desc">This is the default canonical url of this item. Add a custom url below
-                    to override it.</p>
-            </div>
+                    <p class="default_can_url_desc"><?php _e('This is the default canonical url of this item. Add a custom url below to override it.', 'acu'); ?></p>
+                </div>
             <?php } ?>
             <div class="acu_meta_box_container">
                 <label for="acu_adv_can_url" class="acu_adv_can_url">
@@ -166,7 +171,7 @@ if (!class_exists('advance_canonical_meta_box')) {
                        value="<?php echo esc_attr($value); ?>"
                        size="25"/>
 
-                <p class="custom_adv_can_url">Add a custom canonical url.</p>
+                <p class="custom_adv_can_url"><?php _e('Add a custom canonical url', 'acu'); ?></p>
             </div>
             <?php
         }
