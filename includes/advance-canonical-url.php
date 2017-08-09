@@ -30,7 +30,6 @@ if (!class_exists('advance_canonical_url')) {
             if (is_admin()) {
                 add_action('admin_menu', array($this, 'acu_plugin_page'));
                 add_action('admin_init', array($this, 'acu_settings_page_init'));
-                add_action('update_option_acu_options', array($this, 'acu_update_options'), 10, 2);
             }
 
             remove_action('wp_head', 'rel_canonical');
