@@ -11,6 +11,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A WordPress plugin to avoid duplicate content throughout the website with advance settings.
 
+== Screenshots ==
+
+1. Option for administrators to select canonical method.
+
+2. Meta Box option for each post, page and custom post type.
+
 == Changelog ==
 
 = 1.0.0 =
