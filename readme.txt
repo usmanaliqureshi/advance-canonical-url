@@ -1,6 +1,6 @@
 === Advance Canonical URL ===
 Contributors: usmanaliqureshi
-Tags: security, password, random, wordpress, generate password, random password
+Tags: canonical, url, canonical url, duplicate, duplicate content, content, avoid duplicate content, advance canonical url
 Requires at least: 3.0
 Tested up to: 4.8.1
 Stable tag: 4.7.5
