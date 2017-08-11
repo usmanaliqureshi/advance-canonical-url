@@ -1,0 +1,35 @@
+{
+  "name": "advance-canonical-url",
+  "version": "1.0.0",
+  "description": "A WordPress plugin to avoid duplicate content throughout the website with advance settings.",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmanaliqureshi/advance-canonical-url.git"
+  },
+  "keywords": [
+    "canonical",
+    "url",
+    "canonical",
+    "url",
+    "duplicate",
+    "duplicate",
+    "content",
+    "content",
+    "avoid",
+    "duplicate",
+    "content",
+    "advance",
+    "canonical",
+    "url"
+  ],
+  "author": "Usman Ali Qureshi <usman@usmanaliqureshi.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/usmanaliqureshi/advance-canonical-url/issues"
+  },
+  "homepage": "https://github.com/usmanaliqureshi/advance-canonical-url#readme"
+}
