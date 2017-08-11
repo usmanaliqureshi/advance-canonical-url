@@ -1,3 +1,7 @@
+/**
+ * CSS Styles for Advance Canonical URL Option.
+ */
+
 .acu_default_can_url {
     height: auto;
     overflow: auto;
@@ -13,7 +17,7 @@ label.default_can_url {
 }
 
 p#default_can_url {
-    width: 178px;
+    width: auto;
     font-size: 14px;
     float: left;
     position: relative;
