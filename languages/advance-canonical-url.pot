@@ -44,18 +44,18 @@ msgstr ""
 msgid "Advance Canonical URL Setting"
 msgstr ""
 
-#: includes/canonical-meta-box.php:160
+#: includes/canonical-meta-box.php:166
 msgid "Default Canonical URL: "
 msgstr ""
 
-#: includes/canonical-meta-box.php:165
+#: includes/canonical-meta-box.php:171
 msgid "This is the default canonical url of this item. Add a custom url below to override it."
 msgstr ""
 
-#: includes/canonical-meta-box.php:170
+#: includes/canonical-meta-box.php:176
 msgid "Canonical URL: "
 msgstr ""
 
-#: includes/canonical-meta-box.php:176
+#: includes/canonical-meta-box.php:180
 msgid "Add a custom canonical url"
 msgstr ""
