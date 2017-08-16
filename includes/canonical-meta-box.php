@@ -117,11 +117,17 @@ if (!class_exists('advance_canonical_meta_box')) {
                 }
             }
 
-            /* OK, it's safe for us to save the data now. */
             /**
-             * Sanitize the user input.
+             * OK, it's safe for us to save the data now.
+             *
+             * Escaping the DATA for URL.
              */
-            $acu_adv_can_url_data = sanitize_text_field($_POST['acu_adv_can_url']);
+            $acu_adv_can_url_data_escaped = esc_url($_POST['acu_adv_can_url']);
+
+            /**
+             * Sanitize the ESCAPED DATA further.
+             */
+            $acu_adv_can_url_data = sanitize_text_field( $acu_adv_can_url_data_escaped );
 
             /**
              * Update the meta field.
