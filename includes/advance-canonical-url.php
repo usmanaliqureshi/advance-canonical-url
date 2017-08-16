@@ -204,7 +204,7 @@ if (!class_exists('advance_canonical_url')) {
              * Basic Canonical URL
              */
             $basic = '<!-- Advance Canonical URL (Basic) -->';
-            $basic .= '<link rel="canonical" content="' . get_bloginfo('url') . '' . $_SERVER['REQUEST_URI'] . '">';
+            $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo('url') . '' . $_SERVER['REQUEST_URI'] ) . '">';
             $basic .= '<!-- Advance Canonical URL -->';
 
             /**
