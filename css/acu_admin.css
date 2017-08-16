@@ -57,6 +57,7 @@ label.acu_adv_can_url {
 input#acu_adv_can_url {
     float: left;
     margin-right: 10px;
+    width: 80%;
 }
 
 p.custom_adv_can_url {
