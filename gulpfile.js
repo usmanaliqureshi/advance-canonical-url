@@ -9,7 +9,6 @@ var zip = require('gulp-zip');
 var notify = require('gulp-notify');
 var wpPot = require('gulp-wp-pot');
 var sort = require('gulp-sort');
-
 var projectPHPWatchFiles = './**/*.php';
 var translatePath = './languages/'
 var text_domain = 'acu';
