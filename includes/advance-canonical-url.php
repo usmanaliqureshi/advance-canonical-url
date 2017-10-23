@@ -43,10 +43,12 @@ if (!class_exists('advance_canonical_url')) {
         {
             $this->options = get_option('acu_options');
             $canonical_method = ($this->options['canonical_method'] ? $this->options['canonical_method'] : 'basic');
+            $query_strings = ($this->options['query_strings'] ? $this->options['query_strings'] : 'yes');
 
-            if (!isset($this->options['canonical_method'])) {
+            if (!isset($this->options['canonical_method'], $this->options['query_strings'])) {
                 $defaults = array(
-                    'canonical_method' => $canonical_method
+                    'canonical_method' => $canonical_method,
+                    'query_strings' => $query_strings
                 );
                 update_option('acu_options', $defaults);
             }
@@ -121,6 +123,13 @@ if (!class_exists('advance_canonical_url')) {
                 'acu-setting-admin',
                 'settings_advance_canonical'
             );
+            add_settings_field(
+                'query_strings',
+                __('Query Strings', 'acu'),
+                array($this, 'select_query_strings'),
+                'acu-setting-admin',
+                'settings_advance_canonical'
+            );
         }
 
         /**
@@ -167,6 +176,37 @@ if (!class_exists('advance_canonical_url')) {
         }
 
         /**
+         * Options to Select
+         */
+        public function select_query_strings()
+        {
+            $this->options = get_option('acu_options');
+            ?>
+
+            <select id="query_strings" name="acu_options[query_strings]">
+
+                <option
+                    value="yes" <?php echo isset($this->options['query_strings']) ? (selected($this->options['query_strings'], 'yes', false)) : (''); ?>>
+
+                    <?php esc_html_e('Yes', 'acu'); ?>
+
+                </option>
+
+                <option
+                    value="no" <?php echo isset($this->options['query_strings']) ? (selected($this->options['query_strings'], 'no', false)) : (''); ?>>
+
+                    <?php esc_html_e('No', 'acu'); ?>
+
+                </option>
+
+            </select>
+
+            <p class="acu-description"><?php esc_html_e('Do you want to remove query strings (the query sting displays right from the question mark: http://www.website.com/example.php?query=string)', 'acu'); ?></p>
+
+            <?php
+        }
+
+        /**
          * Sanitization & Validation of the option
          * @param $acu_input
          * @return array
@@ -184,6 +224,17 @@ if (!class_exists('advance_canonical_url')) {
                     $acu_new_input['canonical_method'] = sanitize_text_field($acu_input['canonical_method']);
                 } else {
                     wp_die("Invalid selection for Canonical Method, please go back and try again.");
+                }
+            }
+            if (isset($acu_input['query_strings'])) {
+                $acu_method_valid_values = array(
+                    'yes',
+                    'no',
+                );
+                if (in_array($acu_input['query_strings'], $acu_method_valid_values)) {
+                    $acu_new_input['query_strings'] = sanitize_text_field($acu_input['query_strings']);
+                } else {
+                    wp_die("Invalid selection for Query Strings, please go back and try again.");
                 }
             }
             return $acu_new_input;
@@ -204,7 +255,11 @@ if (!class_exists('advance_canonical_url')) {
              * Basic Canonical URL
              */
             $basic = '<!-- Advance Canonical URL (Basic) -->';
-            $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo('url') . '' . $_SERVER['REQUEST_URI'] ) . '">';
+            if ('no' === $this->options['query_strings']) {
+                $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo('url') . '' . $_SERVER['REQUEST_URI'] ). '">';
+            } else {
+                $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo('url') . '' . strtok($_SERVER['REQUEST_URI'], '?') ) . '">';
+            }
             $basic .= '<!-- Advance Canonical URL -->';
 
             /**
