@@ -16,28 +16,44 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/advance-canonical-url.php:113
+#: includes/advance-canonical-url.php:115
 msgid "Advance Canonical Settings"
 msgstr ""
 
-#: includes/advance-canonical-url.php:119
+#: includes/advance-canonical-url.php:121
 msgid "Canonical Method"
 msgstr ""
 
-#: includes/advance-canonical-url.php:133
+#: includes/advance-canonical-url.php:128
+msgid "Query Strings"
+msgstr ""
+
+#: includes/advance-canonical-url.php:142
 msgid "Select your desired settings"
 msgstr ""
 
-#: includes/advance-canonical-url.php:151
+#: includes/advance-canonical-url.php:160
 msgid "Basic"
 msgstr ""
 
-#: includes/advance-canonical-url.php:158
+#: includes/advance-canonical-url.php:167
 msgid "Advance"
 msgstr ""
 
-#: includes/advance-canonical-url.php:164
+#: includes/advance-canonical-url.php:173
 msgid "Choose the method to display canonical url throughout your website. If you choose Advance then each post, page and custom post will have its own canonical url setting."
+msgstr ""
+
+#: includes/advance-canonical-url.php:191
+msgid "Yes"
+msgstr ""
+
+#: includes/advance-canonical-url.php:198
+msgid "No"
+msgstr ""
+
+#: includes/advance-canonical-url.php:204
+msgid "Do you want to remove query strings (the query sting displays right from the question mark: http://www.website.com/example.php?query=string)"
 msgstr ""
 
 #: includes/canonical-meta-box.php:61
