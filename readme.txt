@@ -19,6 +19,14 @@ A WordPress plugin to avoid duplicate content throughout the website with advanc
 
 == Changelog ==
 
+= 1.0.1
+
+* Update: Translation POT File
+
+* Add: Query String Settings
+
+* Initial Release
+
 = 1.0.0 =
 
 * Initial Release
