@@ -1,5 +1,7 @@
 # Advance Canonical URL WordPress Plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/usmanaliqureshi/advance-canonical-url.svg)](https://greenkeeper.io/)
+
 Contributors: usmanaliqureshi
 
 Tags: canonical, url, canonical url, duplicate, duplicate content, content, avoid duplicate content, advance canonical url
