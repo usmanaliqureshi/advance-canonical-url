@@ -2,7 +2,7 @@
 
 Contributors: usmanaliqureshi
 
-Tags: canonical, url, canonical url, duplicate, duplicate content, content, avoid duplicate content, advance canonical url
+Tags: canonical, url, canonical url, duplicate, duplicate content, content, avoid duplicate content, advance canonical url, seo
 
 Requires at least: 3.0
 
@@ -16,7 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 
-A WordPress plugin to avoid duplicate content throughout the website with advance settings.
+A WordPress plugin to avoid duplicate content with respect to SEO throughout the website with advance settings.
 
 ## Screenshots
 
