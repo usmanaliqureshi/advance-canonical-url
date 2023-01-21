@@ -6,7 +6,7 @@
  * Author: Usman Ali Qureshi
  * Author URI: https://www.usmanaliqureshi.com
  * Contributors: usmanaliqureshi
- * Version: 1.0.1
+ * Version: 1.0.2
  * License: GPL2
  * Text Domain: acu
  * Domain Path: /languages/
