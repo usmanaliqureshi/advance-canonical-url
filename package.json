@@ -4,7 +4,11 @@
   "description": "A WordPress plugin to avoid duplicate content throughout the website with advance settings.",
   "main": "gulpfile.js",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.10"
   },
   "repository": {
     "type": "git",
