@@ -255,7 +255,7 @@ if (!class_exists('advance_canonical_url')) {
              * Basic Canonical URL
              */
             $basic = '<!-- Advance Canonical URL (Basic) -->';
-            if ('no' === $this->options['query_strings']) {
+	        if ( ! empty( $this->options['query_strings'] ) && 'no' === $this->options['query_strings'] ) {
                 $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo('url') . '' . $_SERVER['REQUEST_URI'] ). '">';
             } else {
                 $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo('url') . '' . strtok($_SERVER['REQUEST_URI'], '?') ) . '">';

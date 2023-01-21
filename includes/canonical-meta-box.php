@@ -18,7 +18,10 @@ if (!class_exists('advance_canonical_meta_box')) {
         public function __construct()
         {
             $this->options = get_option('acu_options');
-            $canonical_method = $this->options['canonical_method'];
+	        $canonical_method = 'basic';
+	        if ( ! empty( $this->options['canonical_method'] ) ) {
+		        $canonical_method = $this->options['canonical_method'];
+	        }
 
             if ('advance' === $canonical_method) {
                 add_action('admin_enqueue_scripts', array($this, 'acu_admin_style'));
