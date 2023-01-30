@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if (!class_exists('advance_canonical_url')) {
+if ( ! class_exists( 'advance_canonical_url' ) ) {
 
     class advance_canonical_url
     {
