@@ -180,7 +180,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
          */
         public function select_query_strings()
         {
-            $this->options = get_option('acu_options');
+	        $this->options = get_option( 'acu_options' );
             ?>
 
             <select id="query_strings" name="acu_options[query_strings]">
