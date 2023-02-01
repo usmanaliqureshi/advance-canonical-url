@@ -215,7 +215,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         {
             $acu_new_input = array();
 
-            if (isset($acu_input['canonical_method'])) {
+	        if ( isset( $acu_input['canonical_method'] ) ) {
                 $acu_method_valid_values = array(
                     'basic',
                     'advance',
