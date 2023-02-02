@@ -220,7 +220,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                     'basic',
                     'advance',
                 );
-                if (in_array($acu_input['canonical_method'], $acu_method_valid_values)) {
+		        if ( in_array( $acu_input['canonical_method'], $acu_method_valid_values ) ) {
                     $acu_new_input['canonical_method'] = sanitize_text_field($acu_input['canonical_method']);
                 } else {
                     wp_die("Invalid selection for Canonical Method, please go back and try again.");
