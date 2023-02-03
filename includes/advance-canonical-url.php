@@ -226,7 +226,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                     wp_die("Invalid selection for Canonical Method, please go back and try again.");
                 }
             }
-            if (isset($acu_input['query_strings'])) {
+	        if ( isset( $acu_input['query_strings'] ) ) {
                 $acu_method_valid_values = array(
                     'yes',
                     'no',
