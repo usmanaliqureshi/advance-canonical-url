@@ -234,7 +234,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		        if ( in_array( $acu_input['query_strings'], $acu_method_valid_values ) ) {
 			        $acu_new_input['query_strings'] = sanitize_text_field( $acu_input['query_strings'] );
                 } else {
-                    wp_die("Invalid selection for Query Strings, please go back and try again.");
+			        wp_die( "Invalid selection for Query Strings, please go back and try again." );
                 }
             }
             return $acu_new_input;
