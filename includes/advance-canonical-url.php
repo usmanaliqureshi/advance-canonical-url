@@ -247,7 +247,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         {
 	        $this->options = get_option( 'acu_options' );
 
-            $acu_can_url_value = get_post_meta(get_the_ID(), '_acu_can_url_value', true);
+	        $acu_can_url_value = get_post_meta( get_the_ID(), '_acu_can_url_value', true );
 
             $value = esc_url($acu_can_url_value);
 
