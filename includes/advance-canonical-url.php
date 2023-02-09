@@ -27,7 +27,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        register_activation_hook( __FILE__, array( $this, 'acu_activation' ) );
 	        register_deactivation_hook( __FILE__, array( $this, 'acu_deactivation' ) );
 
-            if (is_admin()) {
+	        if ( is_admin() ) {
                 add_action('admin_menu', array($this, 'acu_plugin_page'));
                 add_action('admin_init', array($this, 'acu_settings_page_init'));
             }
