@@ -32,7 +32,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		        add_action( 'admin_init', array( $this, 'acu_settings_page_init' ) );
             }
 
-            remove_action('wp_head', 'rel_canonical');
+	        remove_action( 'wp_head', 'rel_canonical' );
             add_action('wp_head', array($this, 'acu_the_real_deal'));
         }
 
