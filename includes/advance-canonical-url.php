@@ -33,7 +33,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             }
 
 	        remove_action( 'wp_head', 'rel_canonical' );
-            add_action('wp_head', array($this, 'acu_the_real_deal'));
+	        add_action( 'wp_head', array( $this, 'acu_the_real_deal' ) );
         }
 
         /**
