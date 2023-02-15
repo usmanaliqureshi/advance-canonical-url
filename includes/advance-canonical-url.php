@@ -43,7 +43,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         {
 	        $this->options = get_option( 'acu_options' );
 	        $canonical_method = ( $this->options['canonical_method'] ? $this->options['canonical_method'] : 'basic' );
-            $query_strings = ($this->options['query_strings'] ? $this->options['query_strings'] : 'yes');
+	        $query_strings = ( $this->options['query_strings'] ? $this->options['query_strings'] : 'yes' );
 
 	        if ( ! isset( $this->options['canonical_method'], $this->options['query_strings'] ) ) {
                 $defaults = array(
