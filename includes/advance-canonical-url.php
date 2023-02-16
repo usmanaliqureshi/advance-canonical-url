@@ -59,7 +59,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
          */
         public function acu_deactivation()
         {
-            delete_option('acu_options');
+	        delete_option( 'acu_options' );
         }
 
         /**
