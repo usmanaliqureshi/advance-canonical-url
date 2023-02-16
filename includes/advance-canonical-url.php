@@ -105,11 +105,11 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
          */
         public function acu_settings_page_init()
         {
-            register_setting(
-                'acu_option_group',
-                'acu_options',
-                array($this, 'acu_sanitize_and_validate')
-            );
+	        register_setting(
+		        'acu_option_group',
+		        'acu_options',
+		        array( $this, 'acu_sanitize_and_validate' )
+	        );
             add_settings_section(
                 'settings_advance_canonical',
                 __('Advance Canonical Settings', 'acu'),
