@@ -110,12 +110,12 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		        'acu_options',
 		        array( $this, 'acu_sanitize_and_validate' )
 	        );
-            add_settings_section(
-                'settings_advance_canonical',
-                __('Advance Canonical Settings', 'acu'),
-                array($this, 'acu_section_information'),
-                'acu-setting-admin'
-            );
+	        add_settings_section(
+		        'settings_advance_canonical',
+		        __( 'Advance Canonical Settings', 'acu' ),
+		        array( $this, 'acu_section_information' ),
+		        'acu-setting-admin'
+	        );
             add_settings_field(
                 'canonical_method',
                 __('Canonical Method', 'acu'),
