@@ -116,13 +116,13 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		        array( $this, 'acu_section_information' ),
 		        'acu-setting-admin'
 	        );
-            add_settings_field(
-                'canonical_method',
-                __('Canonical Method', 'acu'),
-                array($this, 'select_canonical_method'),
-                'acu-setting-admin',
-                'settings_advance_canonical'
-            );
+	        add_settings_field(
+		        'canonical_method',
+		        __( 'Canonical Method', 'acu' ),
+		        array( $this, 'select_canonical_method' ),
+		        'acu-setting-admin',
+		        'settings_advance_canonical'
+	        );
             add_settings_field(
                 'query_strings',
                 __('Query Strings', 'acu'),
