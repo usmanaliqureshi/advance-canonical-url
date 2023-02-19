@@ -123,13 +123,13 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		        'acu-setting-admin',
 		        'settings_advance_canonical'
 	        );
-            add_settings_field(
-                'query_strings',
-                __('Query Strings', 'acu'),
-                array($this, 'select_query_strings'),
-                'acu-setting-admin',
-                'settings_advance_canonical'
-            );
+	        add_settings_field(
+		        'query_strings',
+		        __( 'Query Strings', 'acu' ),
+		        array( $this, 'select_query_strings' ),
+		        'acu-setting-admin',
+		        'settings_advance_canonical'
+	        );
         }
 
         /**
