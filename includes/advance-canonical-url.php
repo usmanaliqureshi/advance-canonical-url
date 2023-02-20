@@ -157,7 +157,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                 <option
                     value="basic" <?php echo isset($this->options['canonical_method']) ? (selected($this->options['canonical_method'], 'basic', false)) : (''); ?>>
 
-                    <?php esc_html_e('Basic', 'acu'); ?>
+	                <?php esc_html_e( 'Basic', 'acu' ); ?>
 
                 </option>
 
