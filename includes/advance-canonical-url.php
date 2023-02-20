@@ -149,7 +149,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
          */
         public function select_canonical_method()
         {
-            $this->options = get_option('acu_options');
+	        $this->options = get_option( 'acu_options' );
             ?>
 
             <select id="canonical_method" name="acu_options[canonical_method]">
