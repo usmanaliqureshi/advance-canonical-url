@@ -139,7 +139,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         {
             ?>
 
-            <h4><?php esc_html_e('Select your desired settings', 'acu'); ?></h4>
+            <h4><?php esc_html_e( 'Select your desired settings', 'acu' ); ?></h4>
 
             <?php
         }
