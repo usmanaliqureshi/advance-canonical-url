@@ -164,7 +164,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                 <option
                     value="advance" <?php echo isset($this->options['canonical_method']) ? (selected($this->options['canonical_method'], 'advance', false)) : (''); ?>>
 
-                    <?php esc_html_e('Advance', 'acu'); ?>
+	                <?php esc_html_e( 'Advance', 'acu' ); ?>
 
                 </option>
 
