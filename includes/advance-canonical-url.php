@@ -213,13 +213,13 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
          */
         public function acu_sanitize_and_validate($acu_input)
         {
-            $acu_new_input = array();
+	        $acu_new_input = array();
 
 	        if ( isset( $acu_input['canonical_method'] ) ) {
-                $acu_method_valid_values = array(
-                    'basic',
-                    'advance',
-                );
+		        $acu_method_valid_values = array(
+			        'basic',
+			        'advance',
+		        );
 		        if ( in_array( $acu_input['canonical_method'], $acu_method_valid_values ) ) {
                     $acu_new_input['canonical_method'] = sanitize_text_field($acu_input['canonical_method']);
                 } else {
