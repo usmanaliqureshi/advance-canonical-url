@@ -201,7 +201,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 
             </select>
 
-            <p class="acu-description"><?php esc_html_e('Do you want to remove query strings (the query sting displays right from the question mark: http://www.website.com/example.php?query=string)', 'acu'); ?></p>
+            <p class="acu-description"><?php esc_html_e( 'Do you want to remove query strings (the query sting displays right from the question mark: http://www.website.com/example.php?query=string)', 'acu' ); ?></p>
 
             <?php
         }
