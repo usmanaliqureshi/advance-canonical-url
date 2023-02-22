@@ -170,7 +170,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 
             </select>
 
-            <p class="acu-description"><?php esc_html_e('Choose the method to display canonical url throughout your website. If you choose Advance then each post, page and custom post will have its own canonical url setting.', 'acu'); ?></p>
+            <p class="acu-description"><?php esc_html_e( 'Choose the method to display canonical url throughout your website. If you choose Advance then each post, page and custom post will have its own canonical url setting.', 'acu' ); ?></p>
 
             <?php
         }
