@@ -188,7 +188,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                 <option
                     value="yes" <?php echo isset($this->options['query_strings']) ? (selected($this->options['query_strings'], 'yes', false)) : (''); ?>>
 
-                    <?php esc_html_e('Yes', 'acu'); ?>
+	                <?php esc_html_e( 'Yes', 'acu' ); ?>
 
                 </option>
 
