@@ -227,10 +227,10 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                 }
             }
 	        if ( isset( $acu_input['query_strings'] ) ) {
-                $acu_method_valid_values = array(
-                    'yes',
-                    'no',
-                );
+		        $acu_method_valid_values = array(
+			        'yes',
+			        'no',
+		        );
 		        if ( in_array( $acu_input['query_strings'], $acu_method_valid_values ) ) {
 			        $acu_new_input['query_strings'] = sanitize_text_field( $acu_input['query_strings'] );
                 } else {
