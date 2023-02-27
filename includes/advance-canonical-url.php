@@ -258,7 +258,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        if ( ! empty( $this->options['query_strings'] ) && 'no' === $this->options['query_strings'] ) {
 		        $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo( 'url' ) . '' . $_SERVER['REQUEST_URI'] ) . '">';
             } else {
-                $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo('url') . '' . strtok($_SERVER['REQUEST_URI'], '?') ) . '">';
+		        $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo( 'url' ) . '' . strtok( $_SERVER['REQUEST_URI'], '?' ) ) . '">';
             }
             $basic .= '<!-- Advance Canonical URL -->';
 
