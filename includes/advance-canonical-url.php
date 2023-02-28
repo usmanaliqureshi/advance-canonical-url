@@ -260,7 +260,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             } else {
 		        $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo( 'url' ) . '' . strtok( $_SERVER['REQUEST_URI'], '?' ) ) . '">';
             }
-            $basic .= '<!-- Advance Canonical URL -->';
+	        $basic .= '<!-- Advance Canonical URL -->';
 
             /**
              * Advance Canonical URL based on the Canonical Meta Box Option
