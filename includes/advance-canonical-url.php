@@ -265,7 +265,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             /**
              * Advance Canonical URL based on the Canonical Meta Box Option
              */
-            $advance = '<!-- Advance Canonical URL (Advance) -->';
+	        $advance = '<!-- Advance Canonical URL (Advance) -->';
             $advance .= '<link rel="canonical" content="' . $value . '">';
             $advance .= '<!-- Advance Canonical URL -->';
 
