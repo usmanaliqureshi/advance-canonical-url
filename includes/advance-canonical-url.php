@@ -269,7 +269,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        $advance .= '<link rel="canonical" content="' . $value . '">';
 	        $advance .= '<!-- Advance Canonical URL -->';
 
-            switch (true) {
+	        switch ( true ) {
 	            case ( is_front_page() ):
                     echo $basic;
                     break;
