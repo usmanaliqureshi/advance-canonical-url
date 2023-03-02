@@ -274,7 +274,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                     echo $basic;
                     break;
 
-                case (is_home()):
+		        case ( is_home() ):
                     echo $basic;
                     break;
 
