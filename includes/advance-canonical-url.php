@@ -287,7 +287,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                     break;
 
                 default:
-                    $this->acu_render_canonical_url($basic, $advance, $value);
+	                $this->acu_render_canonical_url( $basic, $advance, $value );
             }
         }
 
