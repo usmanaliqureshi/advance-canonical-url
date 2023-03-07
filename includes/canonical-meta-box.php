@@ -2,7 +2,7 @@
 /**
  * Intruders aren't allowed.
  */
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
