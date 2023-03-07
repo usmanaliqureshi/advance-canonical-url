@@ -302,7 +302,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        if ( 'basic' === $this->options['canonical_method'] ) {
                 echo $basic;
             } else {
-                echo (!empty($value)) ? $advance : $basic;
+		        echo ( ! empty( $value ) ) ? $advance : $basic;
             }
         }
     }
