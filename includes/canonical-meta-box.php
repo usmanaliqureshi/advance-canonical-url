@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if (!class_exists('advance_canonical_meta_box')) {
+if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
 
     class advance_canonical_meta_box
     {
