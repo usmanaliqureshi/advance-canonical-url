@@ -23,7 +23,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
 		        $canonical_method = $this->options['canonical_method'];
 	        }
 
-            if ('advance' === $canonical_method) {
+	        if ( 'advance' === $canonical_method ) {
                 add_action('admin_enqueue_scripts', array($this, 'acu_admin_style'));
                 add_action('load-post.php', array($this, 'acu_meta_box_init'));
                 add_action('load-post-new.php', array($this, 'acu_meta_box_init'));
