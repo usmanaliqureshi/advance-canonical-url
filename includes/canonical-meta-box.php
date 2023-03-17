@@ -42,7 +42,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
         public function acu_meta_box_init()
         {
 	        add_action( 'add_meta_boxes', array( $this, 'acu_add_meta_box' ) );
-            add_action('save_post', array($this, 'acu_save_meta_box'));
+	        add_action( 'save_post', array( $this, 'acu_save_meta_box' ) );
         }
 
         /**
