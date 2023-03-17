@@ -54,7 +54,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             /**
              * Display the meta-box everywhere
              */
-            $default_post_types = array('post', 'page');
+	        $default_post_types = array( 'post', 'page' );
             $custom_post_types = get_post_types();
             $post_types = array_merge($default_post_types, $custom_post_types);
 
