@@ -58,7 +58,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
 	        $custom_post_types = get_post_types();
 	        $post_types = array_merge( $default_post_types, $custom_post_types );
 
-            if (in_array($post_type, $post_types)) {
+	        if ( in_array( $post_type, $post_types ) ) {
                 add_meta_box(
                     'acu_canonical_meta_box',
                     __('Advance Canonical URL Setting', 'acu'),
