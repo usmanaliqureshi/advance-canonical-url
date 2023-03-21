@@ -61,7 +61,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
 	        if ( in_array( $post_type, $post_types ) ) {
                 add_meta_box(
                     'acu_canonical_meta_box',
-                    __('Advance Canonical URL Setting', 'acu'),
+	                __( 'Advance Canonical URL Setting', 'acu' ),
                     array($this, 'acu_render_meta_box'),
                     $post_type,
                     'advanced',
