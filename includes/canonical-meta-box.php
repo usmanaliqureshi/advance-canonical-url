@@ -86,7 +86,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             /**
              * Check if our nonce is set.
              */
-            if (!isset($_POST['acu_canonical_meta_box_nonce'])) {
+	        if ( ! isset( $_POST['acu_canonical_meta_box_nonce'] ) ) {
                 return $post_id;
             }
 
