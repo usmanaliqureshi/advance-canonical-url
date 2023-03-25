@@ -90,7 +90,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
                 return $post_id;
             }
 
-            $nonce = $_POST['acu_canonical_meta_box_nonce'];
+	        $nonce = $_POST['acu_canonical_meta_box_nonce'];
 
             /**
              * Verify that the nonce is valid.
