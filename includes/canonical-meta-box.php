@@ -95,7 +95,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             /**
              * Verify that the nonce is valid.
              */
-            if (!wp_verify_nonce($nonce, 'acu_inner_custom_box')) {
+	        if ( ! wp_verify_nonce( $nonce, 'acu_inner_custom_box' ) ) {
                 return $post_id;
             }
 
