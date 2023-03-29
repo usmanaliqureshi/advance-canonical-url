@@ -111,7 +111,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
              * Check the user's permissions.
              */
 	        if ( 'page' == $_POST['post_type'] ) {
-                if (!current_user_can('edit_page', $post_id)) {
+		        if ( ! current_user_can( 'edit_page', $post_id ) ) {
                     return $post_id;
                 }
             } else {
