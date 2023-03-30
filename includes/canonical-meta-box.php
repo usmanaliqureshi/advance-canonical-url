@@ -125,7 +125,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
              *
              * Escaping the DATA for URL.
              */
-            $acu_adv_can_url_data_escaped = esc_url_raw($_POST['acu_adv_can_url']);
+	        $acu_adv_can_url_data_escaped = esc_url_raw( $_POST['acu_adv_can_url'] );
 
             /**
              * Sanitize the ESCAPED DATA further.
