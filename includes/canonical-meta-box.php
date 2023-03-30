@@ -135,7 +135,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             /**
              * Update the meta field.
              */
-            update_post_meta($post_id, '_acu_can_url_value', $acu_adv_can_url_data);
+	        update_post_meta( $post_id, '_acu_can_url_value', $acu_adv_can_url_data );
         }
 
 
