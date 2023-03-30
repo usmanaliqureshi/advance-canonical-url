@@ -115,7 +115,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
                     return $post_id;
                 }
             } else {
-                if (!current_user_can('edit_post', $post_id)) {
+		        if ( ! current_user_can( 'edit_post', $post_id ) ) {
                     return $post_id;
                 }
             }
