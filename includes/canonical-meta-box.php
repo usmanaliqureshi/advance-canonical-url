@@ -143,7 +143,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
          * Render Meta Box content.
          * @param WP_Post $post The post object.
          */
-        public function acu_render_meta_box($post)
+	    public function acu_render_meta_box( $post )
         {
 
             /**
