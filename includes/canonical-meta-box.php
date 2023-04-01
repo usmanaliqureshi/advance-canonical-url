@@ -149,7 +149,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             /**
              * Add an nonce field so we can check for it later.
              */
-            wp_nonce_field('acu_inner_custom_box', 'acu_canonical_meta_box_nonce');
+	        wp_nonce_field( 'acu_inner_custom_box', 'acu_canonical_meta_box_nonce' );
 
             /**
              * Use get_post_meta to retrieve an existing value from the database.
