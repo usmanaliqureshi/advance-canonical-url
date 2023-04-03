@@ -166,7 +166,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
                 ?>
                 <div class="acu_default_can_url">
                     <label for="default_can_url" class="default_can_url">
-                        <?php _e('Default Canonical URL: ', 'acu'); ?>
+	                    <?php _e( 'Default Canonical URL: ', 'acu' ); ?>
                     </label>
 
                     <p id="default_can_url"><?php echo esc_attr($default_can_url); ?></p>
