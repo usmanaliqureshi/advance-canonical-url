@@ -169,7 +169,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
 	                    <?php _e( 'Default Canonical URL: ', 'acu' ); ?>
                     </label>
 
-                    <p id="default_can_url"><?php echo esc_attr($default_can_url); ?></p>
+                    <p id="default_can_url"><?php echo esc_attr( $default_can_url ); ?></p>
 
                     <p class="default_can_url_desc"><?php _e('This is the default canonical url of this item. Add a custom url below to override it.', 'acu'); ?></p>
                 </div>
