@@ -176,7 +176,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             <?php } ?>
             <div class="acu_meta_box_container">
                 <label for="acu_adv_can_url" class="acu_adv_can_url">
-                    <?php _e('Canonical URL: ', 'acu'); ?>
+	                <?php _e( 'Canonical URL: ', 'acu' ); ?>
                 </label>
                 <input type="text" id="acu_adv_can_url" name="acu_adv_can_url"
                        value="<?php echo esc_attr($value); ?>"
