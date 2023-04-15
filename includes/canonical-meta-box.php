@@ -162,7 +162,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
              * Display the form, using the current value.
              */
 
-            if (empty($value)) {
+	        if ( empty( $value ) ) {
                 ?>
                 <div class="acu_default_can_url">
                     <label for="default_can_url" class="default_can_url">
