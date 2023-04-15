@@ -178,8 +178,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
                 <label for="acu_adv_can_url" class="acu_adv_can_url">
 	                <?php _e( 'Canonical URL: ', 'acu' ); ?>
                 </label>
-                <input type="text" id="acu_adv_can_url" name="acu_adv_can_url" value="<?php echo esc_attr( $value ); ?>"
-                       size="25" placeholder="<?php _e('Add a custom canonical url', 'acu'); ?>"/>
+                <input type="text" id="acu_adv_can_url" name="acu_adv_can_url" value="<?php echo esc_attr( $value ); ?>" size="25" placeholder="<?php _e( 'Add a custom canonical url', 'acu' ); ?>" />
             </div>
             <?php
         }
