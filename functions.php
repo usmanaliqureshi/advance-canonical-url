@@ -13,5 +13,4 @@
  */
 
 require_once('includes/canonical-meta-box.php');
-
 require_once('includes/advance-canonical-url.php');
