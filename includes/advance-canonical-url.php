@@ -37,8 +37,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         /**
          * Plugin Activation
          */
-        public function acu_activation()
-        {
+        public function acu_activation() {
 	        $this->options = get_option( 'acu_options' );
 	        $canonical_method = ( $this->options['canonical_method'] ? $this->options['canonical_method'] : 'basic' );
 	        $query_strings = ( $this->options['query_strings'] ? $this->options['query_strings'] : 'yes' );
