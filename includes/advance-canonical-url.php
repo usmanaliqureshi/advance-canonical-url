@@ -54,8 +54,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         /**
          * Plugin Deactivation
          */
-        public function acu_deactivation()
-        {
+        public function acu_deactivation() {
 	        delete_option( 'acu_options' );
         }
 
