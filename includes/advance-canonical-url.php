@@ -61,15 +61,15 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         /**
          * Plugin Page
          */
-        public function acu_plugin_page() {
-	        add_options_page(
-		        'Advance Canonical Settings',
-		        'Advance Canonical Settings',
-		        'manage_options',
-		        'advance_canonical_settings',
-		        array( $this, 'acu_settings_form' )
-	        );
-        }
+	    public function acu_plugin_page() {
+		    add_options_page(
+			    'Advance Canonical Settings',
+			    'Advance Canonical Settings',
+			    'manage_options',
+			    'advance_canonical_settings',
+			    array( $this, 'acu_settings_form' )
+		    );
+	    }
 
         /**
          * Settings Form
