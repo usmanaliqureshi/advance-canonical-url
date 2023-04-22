@@ -74,8 +74,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         /**
          * Settings Form
          */
-        public function acu_settings_form()
-        {
+        public function acu_settings_form() {
             ?>
 
             <div class="wrap">
