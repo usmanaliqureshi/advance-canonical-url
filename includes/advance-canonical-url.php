@@ -82,7 +82,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
                 <form id="acu_form" class="acu_form" method="post" action="options.php">
 
                     <?php
-                    settings_fields('acu_option_group');
+                    settings_fields( 'acu_option_group' );
                     do_settings_sections('acu-setting-admin');
                     submit_button();
                     ?>
