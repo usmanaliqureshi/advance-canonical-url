@@ -83,7 +83,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 
                     <?php
                     settings_fields( 'acu_option_group' );
-                    do_settings_sections('acu-setting-admin');
+                    do_settings_sections( 'acu-setting-admin' );
                     submit_button();
                     ?>
 
