@@ -128,8 +128,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         /**
          * Section Heading
          */
-        public function acu_section_information()
-        {
+        public function acu_section_information() {
             ?>
 
             <h4><?php esc_html_e( 'Select your desired settings', 'acu' ); ?></h4>
