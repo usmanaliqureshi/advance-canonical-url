@@ -232,8 +232,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
         /**
          * The Real Deal
          */
-        public function acu_the_real_deal()
-        {
+        public function acu_the_real_deal() {
 	        $this->options = get_option( 'acu_options' );
 
 	        $acu_can_url_value = get_post_meta( get_the_ID(), '_acu_can_url_value', true );
