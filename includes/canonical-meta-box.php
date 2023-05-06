@@ -8,8 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
 
-    class advance_canonical_meta_box
-    {
+    class advance_canonical_meta_box {
         private $options;
 
         /**
