@@ -14,8 +14,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
         /**
          * Hook into the appropriate actions when the class is constructed.
          */
-        public function __construct()
-        {
+        public function __construct() {
 	        $this->options = get_option( 'acu_options' );
 	        $canonical_method = 'basic';
 	        if ( ! empty( $this->options['canonical_method'] ) ) {
