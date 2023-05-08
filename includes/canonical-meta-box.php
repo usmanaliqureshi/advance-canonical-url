@@ -28,8 +28,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             }
         }
 
-        public function acu_admin_style()
-        {
+        public function acu_admin_style() {
 	        wp_register_style( 'acu_admin-styles', plugin_dir_url( __DIR__ ) . 'css/acu_admin.css', false, '1.0.0' );
 	        wp_enqueue_style( 'acu_admin-styles' );
         }
