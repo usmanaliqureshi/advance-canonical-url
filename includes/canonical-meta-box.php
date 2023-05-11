@@ -45,8 +45,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
          * Adds the meta box container.
          * @param $post_type
          */
-	    public function acu_add_meta_box( $post_type )
-        {
+	    public function acu_add_meta_box( $post_type ) {
             /**
              * Display the meta-box everywhere
              */
