@@ -70,8 +70,7 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
          * @param int $post_id The ID of the post being saved.
          * @return mixed
          */
-	    public function acu_save_meta_box( $post_id )
-        {
+	    public function acu_save_meta_box( $post_id ) {
 
             /*
             * We need to verify this came from the our screen and with proper authorization,
