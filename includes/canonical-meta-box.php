@@ -54,14 +54,14 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
 		    $post_types         = array_merge( $default_post_types, $custom_post_types );
 
 	        if ( in_array( $post_type, $post_types ) ) {
-                add_meta_box(
-                    'acu_canonical_meta_box',
-	                __( 'Advance Canonical URL Setting', 'acu' ),
-	                array( $this, 'acu_render_meta_box' ),
-                    $post_type,
-                    'advanced',
-                    'high'
-                );
+		        add_meta_box(
+			        'acu_canonical_meta_box',
+			        __( 'Advance Canonical URL Setting', 'acu' ),
+			        array( $this, 'acu_render_meta_box' ),
+			        $post_type,
+			        'advanced',
+			        'high'
+		        );
             }
         }
 
