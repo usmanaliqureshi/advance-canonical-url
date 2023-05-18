@@ -147,8 +147,8 @@ if ( ! class_exists( 'advance_canonical_meta_box' ) ) {
             /**
              * Use get_post_meta to retrieve an existing value from the database.
              */
-	        $value = get_post_meta( $post->ID, '_acu_can_url_value', true );
-            $default_can_url = get_permalink();
+		    $value           = get_post_meta( $post->ID, '_acu_can_url_value', true );
+		    $default_can_url = get_permalink();
 
             /**
              * Display the form, using the current value.
