@@ -3,7 +3,7 @@
  * Intruders aren't allowed.
  */
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 if ( ! class_exists( 'advance_canonical_url' ) ) {
