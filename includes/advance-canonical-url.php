@@ -8,8 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'advance_canonical_url' ) ) {
 
-    class advance_canonical_url
-    {
+    class advance_canonical_url{
 
         private $options;
 
