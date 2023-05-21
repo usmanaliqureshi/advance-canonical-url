@@ -33,9 +33,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        add_action( 'wp_head', array( $this, 'acu_the_real_deal' ) );
         }
 
-        /**
-         * Plugin Activation
-         */
+	    /**
+	     * Plugin Activation
+	     */
         public function acu_activation() {
 	        $this->options = get_option( 'acu_options' );
 	        $canonical_method = ( $this->options['canonical_method'] ? $this->options['canonical_method'] : 'basic' );
