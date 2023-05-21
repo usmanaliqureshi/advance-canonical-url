@@ -16,9 +16,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		    $this->acu_init();
 	    }
 
-        /**
-         * Initialization
-         */
+	    /**
+	     * Initialization
+	     */
         public function acu_init() {
 
 	        register_activation_hook( __FILE__, array( $this, 'acu_activation' ) );
