@@ -57,9 +57,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        delete_option( 'acu_options' );
         }
 
-        /**
-         * Plugin Page
-         */
+	    /**
+	     * Plugin Page
+	     */
 	    public function acu_plugin_page() {
 		    add_options_page(
 			    'Advance Canonical Settings',
