@@ -70,9 +70,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		    );
 	    }
 
-        /**
-         * Settings Form
-         */
+	    /**
+	     * Settings Form
+	     */
         public function acu_settings_form() {
             ?>
 
