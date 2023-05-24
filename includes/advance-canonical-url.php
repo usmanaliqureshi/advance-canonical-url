@@ -93,9 +93,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             <?php
         }
 
-        /**
-         * Settings, Section & Fields
-         */
+	    /**
+	     * Settings, Section & Fields
+	     */
         public function acu_settings_page_init() {
 	        register_setting(
 		        'acu_option_group',
