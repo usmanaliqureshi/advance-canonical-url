@@ -135,9 +135,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             <?php
         }
 
-        /**
-         * Options to Select
-         */
+	    /**
+	     * Options to Select
+	     */
         public function select_canonical_method() {
 	        $this->options = get_option( 'acu_options' );
             ?>
