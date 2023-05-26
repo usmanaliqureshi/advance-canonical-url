@@ -124,9 +124,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        );
         }
 
-        /**
-         * Section Heading
-         */
+	    /**
+	     * Section Heading
+	     */
         public function acu_section_information() {
             ?>
 
