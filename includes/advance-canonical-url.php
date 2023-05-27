@@ -165,9 +165,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             <?php
         }
 
-        /**
-         * Options to Select
-         */
+	    /**
+	     * Options to Select
+	     */
         public function select_query_strings() {
 	        $this->options = get_option( 'acu_options' );
             ?>
