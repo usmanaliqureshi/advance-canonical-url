@@ -195,11 +195,13 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             <?php
         }
 
-        /**
-         * Sanitization & Validation of the option
-         * @param $acu_input
-         * @return array
-         */
+	    /**
+	     * Sanitization & Validation of the option
+	     *
+	     * @param $acu_input
+	     *
+	     * @return array
+	     */
 	    public function acu_sanitize_and_validate( $acu_input ) {
 	        $acu_new_input = array();
 
