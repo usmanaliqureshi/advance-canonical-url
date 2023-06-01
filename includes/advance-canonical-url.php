@@ -230,9 +230,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
             return $acu_new_input;
         }
 
-        /**
-         * The Real Deal
-         */
+	    /**
+	     * The Real Deal
+	     */
         public function acu_the_real_deal() {
 	        $this->options = get_option( 'acu_options' );
 
