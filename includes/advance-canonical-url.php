@@ -240,9 +240,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 
 	        $value = esc_url( $acu_can_url_value );
 
-            /**
-             * Basic Canonical URL
-             */
+	        /**
+	         * Basic Canonical URL
+	         */
             $basic = '<!-- Advance Canonical URL (Basic) -->';
 	        if ( ! empty( $this->options['query_strings'] ) && 'no' === $this->options['query_strings'] ) {
 		        $basic .= '<link rel="canonical" content="' . esc_url( get_bloginfo( 'url' ) . '' . $_SERVER['REQUEST_URI'] ) . '">';
