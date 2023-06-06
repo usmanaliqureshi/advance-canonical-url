@@ -267,7 +267,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 			        echo $basic;
 			        break;
 
-                case (is_single()):
+		        case ( is_single() ):
 	                $this->acu_render_canonical_url( $basic, $advance, $value );
                     break;
 
