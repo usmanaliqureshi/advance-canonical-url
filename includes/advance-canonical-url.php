@@ -292,7 +292,7 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 		    } else {
 			    echo ( ! empty( $value ) ) ? $advance : $basic;
 		    }
-        }
+	    }
     }
 
 }
