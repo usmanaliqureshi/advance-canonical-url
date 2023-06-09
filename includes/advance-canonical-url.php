@@ -280,12 +280,13 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	        }
         }
 
-        /**
-         * Rendering the Canonical URL on frontend based on the basic and advance settings
-         * @param $basic
-         * @param $advance
-         * @param $value
-         */
+	    /**
+	     * Rendering the Canonical URL on frontend based on the basic and advance settings
+	     *
+	     * @param $basic
+	     * @param $advance
+	     * @param $value
+	     */
 	    public function acu_render_canonical_url( $basic, $advance, $value ) {
 		    if ( 'basic' === $this->options['canonical_method'] ) {
 			    echo $basic;
