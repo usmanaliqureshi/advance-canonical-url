@@ -13,9 +13,9 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 
         private $options;
 
-	    public function __construct() {
-		    $this->acu_init();
-	    }
+		public function __construct() {
+			$this->acu_init();
+		}
 
 	    /**
 	     * Initialization
