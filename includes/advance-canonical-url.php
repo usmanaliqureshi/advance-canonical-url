@@ -20,19 +20,19 @@ if ( ! class_exists( 'advance_canonical_url' ) ) {
 	    /**
 	     * Initialization
 	     */
-        public function acu_init() {
+		public function acu_init() {
 
-	        register_activation_hook( __FILE__, array( $this, 'acu_activation' ) );
-	        register_deactivation_hook( __FILE__, array( $this, 'acu_deactivation' ) );
+			register_activation_hook( __FILE__, array( $this, 'acu_activation' ) );
+			register_deactivation_hook( __FILE__, array( $this, 'acu_deactivation' ) );
 
-	        if ( is_admin() ) {
-		        add_action( 'admin_menu', array( $this, 'acu_plugin_page' ) );
-		        add_action( 'admin_init', array( $this, 'acu_settings_page_init' ) );
-            }
+			if ( is_admin() ) {
+				add_action( 'admin_menu', array( $this, 'acu_plugin_page' ) );
+				add_action( 'admin_init', array( $this, 'acu_settings_page_init' ) );
+			}
 
-	        remove_action( 'wp_head', 'rel_canonical' );
-	        add_action( 'wp_head', array( $this, 'acu_the_real_deal' ) );
-        }
+			remove_action( 'wp_head', 'rel_canonical' );
+			add_action( 'wp_head', array( $this, 'acu_the_real_deal' ) );
+		}
 
 	    /**
 	     * Plugin Activation
